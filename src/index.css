@@ -70,13 +70,13 @@ ul.ks-cboxtags li label::before {
     transition: transform .3s ease-in-out;
 }
 
-ul.ks-cboxtags li input[type="checkbox"]:onChange + label::before {
+ul.ks-cboxtags li input[type="checkbox"]:checked + label::before {
     content: "✔";
     transform: rotate(-360deg);
     transition: transform .3s ease-in-out;
 }
 
-ul.ks-cboxtags li input[type="checkbox"]:onChange + label {
+ul.ks-cboxtags li input[type="checkbox"]:checked + label {
     border: 2px solid #9f9f9f; 
     background-color: #4F378B;
     color: #fff;
