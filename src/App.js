@@ -90,20 +90,20 @@ function App() {
         <p>What's the coffee?</p>
         <p>We mix the ingredients and get a drink</p>
     </h2>
-    <ul>
+    <ul className='ks-cboxtags'>
     {ingredients.map(({name},index)=>{
       return(
         <li key={index} class="ks-selected">
-        <input type="checkbox" value={name}
+        <input type="checkbox" value={name} id={index}
         checked={checkedState[index]}
         onChange={()=>handleOnChange(index)}/>
-        <label>{name}</label>
+        <label for={index}>{name}</label>
         </li>
       )
     })}
     <p>Ваш кофе={resultCoffee}</p>
     <p>Описание:{resultDescription}</p>
-    <img src={resultImage} width="500" height="500"></img>
+    <img src={resultImage} width="300" height="300"></img>
   
     </ul>
     </div>
